@@ -1,1 +1,1 @@
-export { PetDetailScreen as default } from '../../../src/screens/tutor/PetDetailcreen';
+export { PetDetailScreen as default } from '../../../src/screens/tutor/PetDetailScreen';
