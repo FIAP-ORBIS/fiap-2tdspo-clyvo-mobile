@@ -10,9 +10,6 @@ export function WelcomeScreen() {
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
       <View style={s.ellipseTop} />
       <View style={s.container}>
-        <View style={s.logoCircle}>
-          <Text style={s.logoLetter}>O</Text>
-        </View>
         <Text style={s.brand}>Orbis</Text>
         <Text style={s.heading}>Bem-vindo</Text>
         <Text style={s.subtitle}>O que vamos fazer hoje?</Text>
