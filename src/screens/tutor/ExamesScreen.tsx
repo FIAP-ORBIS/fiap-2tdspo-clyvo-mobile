@@ -174,13 +174,13 @@ export function ExamesScreen() {
   function modalTitle(): string {
     switch (tipoAtivo) {
       case 'pedido':
-        return '📋 Pedido Médico';
+        return 'Pedido Médico';
       case 'exame':
-        return '🔬 Agendar Exame';
+        return 'Agendar Exame';
       case 'vacina':
-        return '💉 Vacinas';
+        return 'Vacinas';
       case 'resultado':
-        return '📤 Compartilhar Resultado';
+        return 'Compartilhar Resultado';
     }
   }
 

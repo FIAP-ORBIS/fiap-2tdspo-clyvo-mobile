@@ -194,7 +194,7 @@ export function ConsultasScreen() {
         <View style={s.modalOverlay}>
           <View style={s.modalSheet}>
             <Text style={s.modalTitle}>
-              {tipoModal === 'teleconsulta' ? '📹 Teleconsulta' : '🏥 Consulta Presencial'}
+              {tipoModal === 'teleconsulta' ? ' Teleconsulta' : ' Consulta Presencial'}
             </Text>
 
             <Text style={s.modalLabel}>Nome do pet *</Text>
