@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StatusBar, Alert, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -35,10 +35,14 @@ export function ProfileScreen() {
     setEditando(false);
   }
 
-  async function handleSair() {
+  useEffect(() => {
+    if (!usuario) router.replace('/auth/welcome');
+  }, [usuario]);
+
+  function handleSair() {
     Alert.alert('Sair', 'Deseja sair da conta da clínica?', [
       { text: 'Cancelar', style: 'cancel' },
-      { text: 'Sair', style: 'destructive', onPress: async () => { await sair(); router.replace('/auth/welcome'); } },
+      { text: 'Sair', style: 'destructive', onPress: () => sair() },
     ]);
   }
 
@@ -48,7 +52,7 @@ export function ProfileScreen() {
       <SafeAreaView edges={['top']} style={s.header}>
         <View style={s.headerRow}>
           <View style={s.avatar}>
-            <Ionicons name="business" size={36} color="#fff" />
+            <Ionicons name="business" size={36} color={COLORS.white} />
           </View>
           <View style={s.headerInfo}>
             <Text style={s.clinicName}>{usuario?.nome ?? 'Clínica'}</Text>
@@ -104,7 +108,7 @@ export function ProfileScreen() {
             />
             {erroHorario ? <Text style={s.fieldError}>{erroHorario}</Text> : null}
 
-            <Text style={[s.fieldLabel, { marginTop: 12 }]}>Cidade *</Text>
+            <Text style={s.fieldLabelGap}>Cidade *</Text>
             <TextInput
               style={[s.fieldInput, erroCidade ? s.fieldInputError : null]}
               placeholder="Ex: São Paulo - SP"
@@ -114,7 +118,7 @@ export function ProfileScreen() {
             />
             {erroCidade ? <Text style={s.fieldError}>{erroCidade}</Text> : null}
 
-            <Text style={[s.fieldLabel, { marginTop: 12 }]}>Tipo de atendimento *</Text>
+            <Text style={s.fieldLabelGap}>Tipo de atendimento *</Text>
             <View style={s.tipoRow}>
               {TIPOS.map(t => (
                 <TouchableOpacity
@@ -122,7 +126,7 @@ export function ProfileScreen() {
                   style={[s.tipoBtn, tipo === t.value && s.tipoBtnActive]}
                   onPress={() => setTipo(t.value)}
                 >
-                  <Ionicons name={t.icon} size={16} color={tipo === t.value ? '#fff' : COLORS.tertiary['500']} />
+                  <Ionicons name={t.icon} size={16} color={tipo === t.value ? COLORS.white : COLORS.tertiary['500']} />
                   <Text style={[s.tipoBtnText, tipo === t.value && s.tipoBtnTextActive]}>{t.label}</Text>
                 </TouchableOpacity>
               ))}

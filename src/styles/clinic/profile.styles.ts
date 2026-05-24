@@ -24,6 +24,7 @@ export const clinicProfileStyles = StyleSheet.create({
   separator: { height: 1, backgroundColor: COLORS.gray['200'], marginLeft: 52 },
   editCard: { backgroundColor: COLORS.white, borderRadius: BORDER_RADIUS.lg, padding: SPACING.md, shadowColor: COLORS.black, shadowOpacity: 0.05, shadowRadius: 6, elevation: 1 },
   fieldLabel: { fontSize: 13, fontWeight: '600', color: COLORS.secondary['500'], marginBottom: 6 },
+  fieldLabelGap: { fontSize: 13, fontWeight: '600', color: COLORS.secondary['500'], marginBottom: 6, marginTop: 12 },
   fieldInput: { borderWidth: 1.5, borderColor: COLORS.gray['200'], borderRadius: BORDER_RADIUS.md, paddingHorizontal: SPACING.sm, paddingVertical: 10, fontSize: 14, color: COLORS.secondary['500'], backgroundColor: COLORS.gray['100'] },
   fieldInputError: { borderColor: COLORS.primary['500'] },
   fieldError: { fontSize: 12, color: COLORS.primary['500'], marginTop: 4 },
