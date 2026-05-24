@@ -42,11 +42,21 @@ export function PetFormScreen() {
     }
   }
 
+  function handleLimpar() {
+    setNome('');
+    setEspecie('');
+    setRaca('');
+    setGenero('desconhecido');
+    setPeso('');
+    setCor('');
+    setObs('');
+    setFoto(undefined);
+  }
+
   async function handleSalvar() {
     if (!nome.trim()) { Alert.alert('Atenção', 'O nome do pet é obrigatório.'); return; }
     if (!especie.trim()) { Alert.alert('Atenção', 'A espécie é obrigatória.'); return; }
     setSalvando(true);
-    
     const pet: IPet = {
       id: 'pet_' + Date.now(),
       tutorId: usuario?.id ?? 'sem_tutor',
@@ -132,10 +142,16 @@ export function PetFormScreen() {
           <Text style={s.label}>Observações</Text>
           <TextInput style={[s.input, s.textArea]} value={obs} onChangeText={setObs} placeholder="Alergias, condições especiais..." placeholderTextColor={COLORS.gray['400']} multiline numberOfLines={3} textAlignVertical="top" />
 
-          <TouchableOpacity style={s.saveBtn} onPress={handleSalvar} disabled={salvando} activeOpacity={0.85}>
-            <Ionicons name="paw" size={20} color={COLORS.white} />
-            <Text style={s.saveBtnText}>{salvando ? 'Salvando...' : 'Salvar pet'}</Text>
-          </TouchableOpacity>
+          <View style={s.btnRow}>
+            <TouchableOpacity style={s.clearBtn} onPress={handleLimpar} activeOpacity={0.75}>
+              <Ionicons name="refresh-outline" size={18} color={COLORS.gray['500']} />
+              <Text style={s.clearBtnText}>Limpar</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={s.saveBtn} onPress={handleSalvar} disabled={salvando} activeOpacity={0.85}>
+              <Ionicons name="paw" size={20} color={COLORS.white} />
+              <Text style={s.saveBtnText}>{salvando ? 'Salvando...' : 'Salvar'}</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -22,6 +22,9 @@ export const petFormStyles = StyleSheet.create({
   generoTextActive: { color: COLORS.white },
   rowFields: { flexDirection: 'row', gap: SPACING.sm },
   halfField: { flex: 1 },
-  saveBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', backgroundColor: COLORS.primary['500'], borderRadius: BORDER_RADIUS.lg, height: 56, gap: SPACING.sm, marginTop: SPACING.md },
+  btnRow: { flexDirection: 'row', gap: SPACING.sm, marginTop: SPACING.md },
+  saveBtn: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', backgroundColor: COLORS.primary['500'], borderRadius: BORDER_RADIUS.lg, height: 56, gap: SPACING.sm },
   saveBtnText: { color: COLORS.white, fontSize: 16, fontWeight: '800' },
+  clearBtn: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', borderWidth: 1.5, borderColor: COLORS.gray['300'], borderRadius: BORDER_RADIUS.lg, height: 56, gap: SPACING.sm },
+  clearBtnText: { color: COLORS.gray['500'], fontSize: 15, fontWeight: '700' },
 });
