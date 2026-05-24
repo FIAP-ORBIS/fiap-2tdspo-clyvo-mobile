@@ -107,7 +107,7 @@ export function SignupTutorScreen() {
             <View style={s.checkCircle}><Text style={s.check}>✓</Text></View>
             <Text style={s.successTitle}>Conta criada!</Text>
             <Text style={s.successSub}>Agora cadastre seu pet na aba Pets.</Text>
-            <Button title="Acessar o app 🐾" onPress={handleFinish} style={s.btn} />
+            <Button title="Acessar o app" onPress={handleFinish} style={s.btn} />
           </View>
         )}
       </ScrollView>

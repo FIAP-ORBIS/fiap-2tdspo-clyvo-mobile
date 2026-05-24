@@ -39,6 +39,8 @@ export const consultasStyles = StyleSheet.create({
   modalInput: { borderWidth: 1.5, borderColor: COLORS.gray['200'], borderRadius: BORDER_RADIUS.md, height: 52, paddingHorizontal: SPACING.md, fontSize: 15, color: COLORS.secondary['500'], backgroundColor: COLORS.gray['100'], marginBottom: SPACING.md },
   modalBtn: { backgroundColor: COLORS.primary['500'], borderRadius: BORDER_RADIUS.md, height: 54, alignItems: 'center', justifyContent: 'center', marginTop: SPACING.sm },
   modalBtnText: { color: COLORS.white, fontSize: 16, fontWeight: '700' },
+  modalLimparBtn: { borderWidth: 1.5, borderColor: COLORS.gray['300'], borderRadius: BORDER_RADIUS.md, height: 48, alignItems: 'center', justifyContent: 'center', marginTop: SPACING.sm },
+  modalLimparText: { color: COLORS.gray['500'], fontSize: 14, fontWeight: '600' },
   modalCancelBtn: { alignItems: 'center', marginTop: SPACING.sm, padding: SPACING.sm },
   modalCancelText: { color: COLORS.gray['500'], fontSize: 14 },
 });

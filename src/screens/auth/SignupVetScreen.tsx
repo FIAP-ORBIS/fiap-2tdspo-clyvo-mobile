@@ -99,7 +99,7 @@ export function SignupVetScreen() {
             <View style={s.checkCircle}><Text style={s.check}>✓</Text></View>
             <Text style={s.successTitle}>Conta criada!</Text>
             <Text style={s.successSub}>Complete seu perfil com horários e localização na aba Perfil.</Text>
-            <Button title="Acessar plataforma 🩺" onPress={handleFinish} style={s.btn} />
+            <Button title="Acessar plataforma" onPress={handleFinish} style={s.btn} />
           </View>
         )}
       </ScrollView>

@@ -194,7 +194,7 @@ export function ConsultasScreen() {
         <View style={s.modalOverlay}>
           <View style={s.modalSheet}>
             <Text style={s.modalTitle}>
-              {tipoModal === 'teleconsulta' ? ' Teleconsulta' : ' Consulta Presencial'}
+              {tipoModal === 'teleconsulta' ? '📹 Teleconsulta' : '🏥 Consulta Presencial'}
             </Text>
 
             <Text style={s.modalLabel}>Nome do pet *</Text>
@@ -244,6 +244,10 @@ export function ConsultasScreen() {
 
             <TouchableOpacity style={s.modalBtn} onPress={handleAgendar}>
               <Text style={s.modalBtnText}>Confirmar agendamento</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={s.modalLimparBtn} onPress={resetForm}>
+              <Text style={s.modalLimparText}>Limpar campos</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
