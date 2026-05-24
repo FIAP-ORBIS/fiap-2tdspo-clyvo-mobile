@@ -13,7 +13,6 @@ export interface IPet {
   peso: string;
   cor: string;
   notasSaude?: string;
-  emoji: string;
   foto?: string;
   ultimoScore?: number;
   risco?: NivelRisco;

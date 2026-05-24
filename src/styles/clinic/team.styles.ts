@@ -5,7 +5,7 @@ import { SPACING, BORDER_RADIUS } from '../spacing';
 export const teamStyles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.gray['100'] },
   header: { backgroundColor: COLORS.tertiary['500'], paddingHorizontal: SPACING.md, paddingBottom: SPACING.lg },
-  title: { fontSize: 22, fontWeight: '700', color: '#FFFFFF', marginTop: SPACING.md },
+  title: { fontSize: 22, fontWeight: '700', color: COLORS.white, marginTop: SPACING.md },
   subtitle: { fontSize: 13, color: 'rgba(255,255,255,0.8)', marginTop: 2 },
   scroll: { paddingHorizontal: SPACING.md, paddingBottom: 100 },
   emptyState: { alignItems: 'center', paddingVertical: 64 },
@@ -20,5 +20,6 @@ export const teamStyles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: SPACING.lg,
   },
-  inviteBtnText: { fontSize: 15, color: '#FFFFFF', fontWeight: '600' },
+  inviteBtnText: { fontSize: 15, color: COLORS.white, fontWeight: '600' },
+  inviteBtnIcon: { marginRight: 8 },
 });

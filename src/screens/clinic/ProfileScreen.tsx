@@ -156,7 +156,7 @@ export function ProfileScreen() {
         )}
 
         <TouchableOpacity style={s.logoutBtn} onPress={handleSair} activeOpacity={0.8}>
-          <Ionicons name="log-out-outline" size={20} color="#fff" style={{ marginRight: 8 }} />
+          <Ionicons name="log-out-outline" size={20} color={COLORS.white} style={s.logoutIcon} />
           <Text style={s.logoutText}>Sair da conta</Text>
         </TouchableOpacity>
       </ScrollView>

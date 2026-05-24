@@ -55,14 +55,10 @@ export function AgendaScreen() {
         <Text style={s.dayTitle}>Hoje — {hojeLabel}</Text>
 
         {consultas.length === 0 ? (
-          <View style={{ alignItems: 'center', paddingVertical: 48 }}>
+          <View style={s.emptyState}>
             <Ionicons name="calendar-outline" size={56} color={COLORS.gray['200']} />
-            <Text style={{ fontSize: 16, fontWeight: '600', color: COLORS.gray['500'], marginTop: 12 }}>
-              Nenhuma consulta registrada
-            </Text>
-            <Text style={{ fontSize: 14, color: COLORS.gray['400'], marginTop: 4, textAlign: 'center', paddingHorizontal: 24 }}>
-              As consultas agendadas pelos tutores aparecerão aqui
-            </Text>
+            <Text style={s.emptyTitle}>Nenhuma consulta registrada</Text>
+            <Text style={s.emptySubtitle}>As consultas agendadas pelos tutores aparecerão aqui</Text>
           </View>
         ) : (
           consultas.map((apt, i) => {

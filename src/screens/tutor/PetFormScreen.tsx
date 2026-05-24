@@ -9,6 +9,7 @@ import { salvarPet } from '../../data/storage';
 import { IPet } from '../../interfaces/IPet';
 import { Genero } from '../../interfaces/IPet';
 import { petFormStyles as s } from '../../styles/tutor/pet-form.styles';
+import { globalStyles } from '../../styles/global.styles';
 import { COLORS } from '../../styles/colors';
 
 export function PetFormScreen() {
@@ -45,8 +46,7 @@ export function PetFormScreen() {
     if (!nome.trim()) { Alert.alert('Atenção', 'O nome do pet é obrigatório.'); return; }
     if (!especie.trim()) { Alert.alert('Atenção', 'A espécie é obrigatória.'); return; }
     setSalvando(true);
-    const emojiMap: Record<string, string> = { cachorro: '🐕', gato: '🐱', pássaro: '🐦', peixe: '🐟', coelho: '🐰', hamster: '🐹' };
-    const emoji = emojiMap[especie.toLowerCase()] ?? '🐾';
+    
     const pet: IPet = {
       id: 'pet_' + Date.now(),
       tutorId: usuario?.id ?? 'sem_tutor',
@@ -58,7 +58,6 @@ export function PetFormScreen() {
       peso: peso.trim(),
       cor: cor.trim(),
       notasSaude: obs.trim(),
-      emoji,
       foto,
     };
     await salvarPet(pet);
@@ -73,7 +72,7 @@ export function PetFormScreen() {
   ];
 
   return (
-    <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: '#fff' }}>
+    <SafeAreaView edges={['top']} style={globalStyles.safeArea}>
       <ScrollView contentContainerStyle={s.scroll} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
         {/* Header */}
         <View style={s.headerRow}>

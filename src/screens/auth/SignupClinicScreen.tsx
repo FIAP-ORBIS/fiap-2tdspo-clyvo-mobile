@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 import { signupStyles as s } from '../../styles/auth/signup.styles';
+import { globalStyles } from '../../styles/global.styles';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import { useAuth } from '../../context/AuthContext';
@@ -59,7 +60,7 @@ export function SignupClinicScreen() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+    <SafeAreaView style={globalStyles.safeArea}>
       <ScrollView contentContainerStyle={s.scrollContent} keyboardShouldPersistTaps="handled">
         <View style={s.header}>
           <TouchableOpacity onPress={handleBack}>

@@ -28,7 +28,7 @@ export function TeamScreen() {
           onPress={() => Alert.alert('Em breve', 'O convite de veterinários estará disponível em breve!')}
           activeOpacity={0.8}
         >
-          <Ionicons name="person-add-outline" size={20} color="#fff" style={{ marginRight: 8 }} />
+          <Ionicons name="person-add-outline" size={20} color="#fff" style={s.inviteBtnIcon} />
           <Text style={s.inviteBtnText}>Convidar veterinário</Text>
         </TouchableOpacity>
       </ScrollView>

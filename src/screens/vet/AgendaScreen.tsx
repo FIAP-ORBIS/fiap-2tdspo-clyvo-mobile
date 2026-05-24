@@ -10,13 +10,13 @@ import { vetAgendaStyles as s } from '../../styles/vet/agenda.styles';
 
 const STATUS_CORES: Record<string, string> = {
   agendada: COLORS.secondary['500'],
-  concluida: '#22C55E',
+  concluida: COLORS.status.success,
   cancelada: COLORS.primary['500'],
 };
 
 const STATUS_BG: Record<string, string> = {
   agendada: COLORS.secondary['500'] + '20',
-  concluida: '#22C55E20',
+  concluida: COLORS.status.successBg,
   cancelada: COLORS.primary['500'] + '20',
 };
 
@@ -61,14 +61,10 @@ export function AgendaScreen() {
         <Text style={s.dayTitle}>Hoje — {hojeLabel}</Text>
 
         {consultas.length === 0 ? (
-          <View style={{ alignItems: 'center', paddingVertical: 48 }}>
+          <View style={s.emptyState}>
             <Ionicons name="calendar-outline" size={56} color={COLORS.gray['200']} />
-            <Text style={{ fontSize: 16, fontWeight: '600', color: COLORS.gray['500'], marginTop: 12 }}>
-              Nenhuma consulta ainda
-            </Text>
-            <Text style={{ fontSize: 14, color: COLORS.gray['400'], marginTop: 4, textAlign: 'center', paddingHorizontal: 24 }}>
-              Consultas agendadas pelos tutores aparecerão aqui
-            </Text>
+            <Text style={s.emptyTitle}>Nenhuma consulta ainda</Text>
+            <Text style={s.emptySubtitle}>Consultas agendadas pelos tutores aparecerão aqui</Text>
           </View>
         ) : (
           consultas.map((apt, i) => {

@@ -1,0 +1,38 @@
+import { StyleSheet } from 'react-native';
+import { COLORS } from '../colors';
+import { SPACING, BORDER_RADIUS } from '../spacing';
+
+export const petDetailStyles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: COLORS.gray['100'] },
+  headerBg: { backgroundColor: COLORS.accent.purple, paddingBottom: SPACING.xl },
+  backBtn: { padding: SPACING.md },
+  avatarSection: { alignItems: 'center', paddingHorizontal: SPACING.md },
+  avatarCircle: { width: 90, height: 90, borderRadius: 45, backgroundColor: 'rgba(255,255,255,0.2)', alignItems: 'center', justifyContent: 'center', marginBottom: SPACING.sm, overflow: 'hidden' },
+  avatarImg: { width: 90, height: 90, borderRadius: 45 },
+  avatarEmoji: { fontSize: 44 },
+  petName: { fontSize: 26, fontWeight: '800', color: COLORS.white, marginBottom: 4 },
+  petSubtitle: { fontSize: 14, color: 'rgba(255,255,255,0.8)' },
+  actionsBar: { flexDirection: 'row', backgroundColor: COLORS.accent.purpleDark, paddingVertical: SPACING.sm },
+  actionItem: { flex: 1, alignItems: 'center', gap: 4 },
+  actionLabel: { fontSize: 10, color: 'rgba(255,255,255,0.9)', fontWeight: '600' },
+  scroll: { paddingHorizontal: SPACING.md, paddingBottom: 100 },
+  infoCard: { backgroundColor: COLORS.white, borderRadius: BORDER_RADIUS.lg, padding: SPACING.md, marginTop: SPACING.md, flexDirection: 'row', flexWrap: 'wrap', gap: SPACING.sm },
+  chip: { borderRadius: BORDER_RADIUS.md, padding: SPACING.sm, minWidth: 90, alignItems: 'center' },
+  chipLabel: { fontSize: 11, fontWeight: '600' },
+  chipValue: { fontSize: 14, fontWeight: '800', marginTop: 2 },
+  obsCard: { backgroundColor: COLORS.white, borderRadius: BORDER_RADIUS.lg, padding: SPACING.md, marginTop: SPACING.sm },
+  obsLabel: { fontSize: 13, fontWeight: '700', color: COLORS.gray['500'], marginBottom: SPACING.xs },
+  obsText: { fontSize: 14, color: COLORS.secondary['500'], lineHeight: 20 },
+  sectionTitle: { fontSize: 18, fontWeight: '700', color: COLORS.secondary['500'], marginTop: SPACING.lg, marginBottom: SPACING.sm },
+  timelineItem: { flexDirection: 'row', gap: SPACING.md, marginBottom: SPACING.sm },
+  timelineDotCol: { alignItems: 'center', width: 14 },
+  timelineDot: { width: 14, height: 14, borderRadius: 7, backgroundColor: COLORS.primary['500'], marginTop: SPACING.md },
+  timelineLine: { flex: 1, width: 2, backgroundColor: COLORS.gray['200'], marginTop: 4 },
+  timelineBody: { flex: 1 },
+  timelineDate: { fontSize: 12, color: COLORS.gray['400'], marginBottom: 4 },
+  timelineCard: { backgroundColor: COLORS.white, borderRadius: BORDER_RADIUS.md, padding: SPACING.md },
+  timelineTitle: { fontSize: 15, fontWeight: '700', color: COLORS.secondary['500'], marginBottom: 2 },
+  timelineDesc: { fontSize: 13, color: COLORS.gray['500'], marginBottom: 2 },
+  timelineAuthor: { fontSize: 12, color: COLORS.gray['400'] },
+  emptyText: { color: COLORS.gray['400'], fontSize: 14 },
+});

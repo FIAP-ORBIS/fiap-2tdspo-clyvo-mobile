@@ -103,7 +103,7 @@ export function ExplorarScreen() {
                     {pet.foto ? (
                       <Image source={{ uri: pet.foto }} style={s.petGridPhotoImg} />
                     ) : (
-                      <Text style={s.petGridEmoji}>{pet.emoji ?? '🐾'}</Text>
+                      <Ionicons name="paw" size={40} color={COLORS.gray['300']} />
                     )}
                   </View>
                   <Text

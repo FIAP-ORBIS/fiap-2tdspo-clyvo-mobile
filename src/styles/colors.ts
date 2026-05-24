@@ -60,6 +60,16 @@ export const COLORS = {
     '#7C2D12',
   ],
 
+  accent: {
+    purple: '#7C3AED',
+    purpleDark: '#5B21B6',
+  },
+  status: {
+    success: '#22C55E',
+    successBg: '#22C55E20',
+    warning: '#F59E0B',
+    danger: '#EF4444',
+  },
   white: '#FFFFFF',
   black: '#000000',
   gray: {

@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
+import type { Href } from 'expo-router';
 import { roleSelectStyles as s } from '../../styles/auth/role-select.styles';
+import { globalStyles } from '../../styles/global.styles';
 
 const ROLES = [
   {
@@ -27,7 +29,7 @@ const ROLES = [
 export function RoleSelectScreen() {
   const router = useRouter();
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+    <SafeAreaView style={globalStyles.safeArea}>
       <View style={s.container}>
         <TouchableOpacity style={s.back} onPress={() => router.back()}>
           <Text style={s.backText}>←</Text>
@@ -39,7 +41,7 @@ export function RoleSelectScreen() {
             <TouchableOpacity
               key={role.rota}
               style={s.card}
-              onPress={() => router.push(role.rota as any)}
+              onPress={() => router.push(role.rota as Href)}
               activeOpacity={0.85}
             >
               {/* <View style={s.emojiCircle}>

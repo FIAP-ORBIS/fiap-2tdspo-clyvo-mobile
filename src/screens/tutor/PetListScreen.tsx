@@ -27,7 +27,7 @@ export function PetListScreen() {
         <View style={s.photoCircle}>
           {item.foto
             ? <Image source={{ uri: item.foto }} style={s.photoImg} />
-            : <Text style={s.emoji}>{item.emoji ?? '🐾'}</Text>}
+            : <Ionicons name="paw" size={30} color={COLORS.gray['300']} />}
         </View>
         <Ionicons name="heart-outline" size={18} color={textColor} style={s.heart} />
         <Text style={[s.petName, { color: textColor }]}>{item.nome}</Text>

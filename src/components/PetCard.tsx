@@ -12,7 +12,6 @@ interface PetCardProps {
 export function PetCard({ pet, onPress, status = 'ok' }: PetCardProps) {
   return (
     <TouchableOpacity style={s.card} onPress={onPress} activeOpacity={0.85}>
-      <Text style={s.emoji}>{pet.emoji}</Text>
       <Text style={s.name}>{pet.nome}</Text>
       <Text style={s.info}>{pet.raca} · {pet.idade}</Text>
       <View style={status === 'attention' ? s.badgeAttention : s.badgeOk}>

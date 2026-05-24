@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 import { signupStyles as s } from '../../styles/auth/signup.styles';
+import { globalStyles } from '../../styles/global.styles';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import { useAuth } from '../../context/AuthContext';
@@ -66,7 +67,7 @@ export function SignupTutorScreen() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+    <SafeAreaView style={globalStyles.safeArea}>
       <ScrollView contentContainerStyle={s.scrollContent} keyboardShouldPersistTaps="handled">
         <View style={s.header}>
           <TouchableOpacity onPress={handleBack}>
@@ -106,7 +107,7 @@ export function SignupTutorScreen() {
             <View style={s.checkCircle}><Text style={s.check}>✓</Text></View>
             <Text style={s.successTitle}>Conta criada!</Text>
             <Text style={s.successSub}>Agora cadastre seu pet na aba Pets.</Text>
-            <Button title="Acessar o app" onPress={handleFinish} style={s.btn} />
+            <Button title="Acessar o app 🐾" onPress={handleFinish} style={s.btn} />
           </View>
         )}
       </ScrollView>
