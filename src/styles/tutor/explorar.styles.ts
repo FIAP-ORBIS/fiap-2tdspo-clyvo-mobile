@@ -1,0 +1,53 @@
+import { StyleSheet, Dimensions } from 'react-native';
+import { COLORS } from '../colors';
+import { SPACING, BORDER_RADIUS } from '../spacing';
+
+const { width } = Dimensions.get('window');
+const CARD_W = (width - SPACING.md * 2 - SPACING.sm) / 2;
+
+export const explorarStyles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: COLORS.gray['100'] },
+  header: { backgroundColor: COLORS.secondary['500'], paddingBottom: SPACING.lg },
+  headerTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: SPACING.md, paddingTop: SPACING.md },
+  headerTitle: { fontSize: 24, fontWeight: '800', color: COLORS.white },
+  avatarBtn: { width: 38, height: 38, borderRadius: 19, backgroundColor: COLORS.primary['500'], alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
+  avatarImg: { width: 38, height: 38, borderRadius: 19 },
+  searchBox: { flexDirection: 'row', alignItems: 'center', backgroundColor: COLORS.white, borderRadius: BORDER_RADIUS.full, marginHorizontal: SPACING.md, marginTop: SPACING.sm, paddingHorizontal: SPACING.md, height: 44, gap: SPACING.sm },
+  searchInput: { flex: 1, fontSize: 15, color: COLORS.secondary['500'] },
+  scroll: { flex: 1 },
+  scrollContent: { paddingBottom: 100 },
+  sectionHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: SPACING.md, marginTop: SPACING.lg, marginBottom: SPACING.sm },
+  sectionTitle: { fontSize: 18, fontWeight: '700', color: COLORS.secondary['500'] },
+  seeAll: { fontSize: 13, color: COLORS.primary['500'], fontWeight: '600' },
+  petsGrid: { flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: SPACING.md, gap: SPACING.sm },
+  petGridCard: { width: CARD_W, borderRadius: BORDER_RADIUS.lg, overflow: 'hidden', marginBottom: SPACING.xs },
+  petGridCardInner: { padding: SPACING.md, paddingBottom: SPACING.sm },
+  petGridPhoto: { width: 72, height: 72, borderRadius: 36, backgroundColor: 'rgba(255,255,255,0.4)', alignSelf: 'center', marginBottom: SPACING.xs, overflow: 'hidden' },
+  petGridPhotoImg: { width: 72, height: 72, borderRadius: 36 },
+  petGridEmoji: { fontSize: 36, textAlign: 'center' },
+  petGridName: { fontSize: 16, fontWeight: '700', textAlign: 'center', marginTop: SPACING.xs },
+  petGridInfo: { fontSize: 12, textAlign: 'center', marginTop: 2 },
+  favoriteBtn: { position: 'absolute', top: SPACING.sm, right: SPACING.sm },
+  emptyPets: { alignItems: 'center', paddingVertical: SPACING.xl, paddingHorizontal: SPACING.md },
+  emptyText: { fontSize: 15, color: COLORS.gray['500'], marginTop: SPACING.sm, textAlign: 'center' },
+  emptyBtn: { marginTop: SPACING.md, backgroundColor: COLORS.primary['500'], paddingHorizontal: SPACING.lg, paddingVertical: SPACING.sm, borderRadius: BORDER_RADIUS.full },
+  emptyBtnText: { color: COLORS.white, fontWeight: '600', fontSize: 14 },
+  aptRow: { paddingHorizontal: SPACING.md, gap: SPACING.sm },
+  aptCard: { backgroundColor: COLORS.white, borderRadius: BORDER_RADIUS.lg, padding: SPACING.md, flexDirection: 'row', gap: SPACING.md, alignItems: 'center', shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.06, shadowRadius: 4, elevation: 2 },
+  aptDateBox: { width: 48, height: 48, borderRadius: BORDER_RADIUS.md, backgroundColor: COLORS.primary['050'], alignItems: 'center', justifyContent: 'center' },
+  aptDateDay: { fontSize: 18, fontWeight: '800', color: COLORS.primary['500'] },
+  aptDateMon: { fontSize: 10, color: COLORS.primary['400'], fontWeight: '600' },
+  aptContent: { flex: 1 },
+  aptTitle: { fontSize: 14, fontWeight: '700', color: COLORS.secondary['500'] },
+  aptSub: { fontSize: 12, color: COLORS.gray['500'], marginTop: 2 },
+  aptBadge: { paddingHorizontal: SPACING.sm, paddingVertical: 3, borderRadius: BORDER_RADIUS.full, backgroundColor: COLORS.tertiary['050'] },
+  aptBadgeText: { fontSize: 11, color: COLORS.tertiary['600'], fontWeight: '600' },
+  vetRow: { paddingHorizontal: SPACING.md, gap: SPACING.sm },
+  vetCard: { backgroundColor: COLORS.white, borderRadius: BORDER_RADIUS.lg, padding: SPACING.md, alignItems: 'center', width: 130, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.06, shadowRadius: 4, elevation: 2 },
+  vetAvatar: { width: 60, height: 60, borderRadius: 30, backgroundColor: COLORS.secondary['100'], alignItems: 'center', justifyContent: 'center', marginBottom: SPACING.xs, overflow: 'hidden' },
+  vetAvatarImg: { width: 60, height: 60, borderRadius: 30 },
+  vetName: { fontSize: 13, fontWeight: '700', color: COLORS.secondary['500'], textAlign: 'center' },
+  vetSpec: { fontSize: 11, color: COLORS.gray['500'], textAlign: 'center', marginTop: 2 },
+  vetOnline: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#10B981', marginTop: SPACING.xs },
+  noDataText: { color: COLORS.gray['400'], fontSize: 14, padding: SPACING.md },
+});
